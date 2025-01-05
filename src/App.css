@@ -1,0 +1,58 @@
+/* Ensure the root takes full screen */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+/* Remove the max-width restriction and let the container fill the screen */
+#root {
+  margin: 0; /* Centering no longer needed */
+  padding: 0; /* Adjust padding if desired */
+  height: 100%; /* Make the root take up the full viewport height */
+  display: flex; /* Optional: For layout control */
+  flex-direction: column; /* Stack child elements vertically */
+}
+
+/* Optional: Center the logo and content */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+/* Cards and other content styles */
+.card {
+  padding: 2em;
+  margin: auto; /* Center cards within the container */
+}
+
+.read-the-docs {
+  color: #888;
+  margin-top: auto; /* Push the docs link to the bottom if needed */
+}
